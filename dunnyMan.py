@@ -7,7 +7,7 @@ import shutil
 Ben McGuffog. Project Support Engineer
 Processes the WC_Alarms.txt data into a usable csv format called WC_Alarms.csv.
 Filters out the Over-temperature faults and writes them to the file OverTempLogs.csv
-Version 1.0
+Version 1.1
 """
 
 
@@ -85,8 +85,10 @@ class DunnyMan:
         alarms = pd.read_csv(tempFile, sep=',',
                              names=["Time", "Mode",
                                     "Alarm01", "Alarm02", "Alarm03", "Alarm04", "Alarm05",
-                                    "Alarm06", "Alarm07", "Alarm08", "Alarm09", "Alarm10"
-                                    "Alarm11", "Alarm12", "Alarm13", "Alarm14", "Alarm15"])
+                                    "Alarm06", "Alarm07", "Alarm08", "Alarm09", "Alarm10",
+                                    "Alarm11", "Alarm12", "Alarm13", "Alarm14", "Alarm15",
+                                    "Alarm16", "Alarm17", "Alarm18", "Alarm19", "Alarm20",
+                                    "Alarm21", "Alarm22", "Alarm23", "Alarm24", "Alarm25"])
         alarms = alarms.dropna(axis=1, how='all')
 
         return alarms.fillna(0)
